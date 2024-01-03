@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="flex">
+        <section class="header h-screen w-[300px] sm:w-[200px] lg:w-[300px] xl:w-[300px] ">
+            <div class=" h-full w-full  bg-[#e2e8f0] relative  p-4">
+                <a href="#" class="text-3xl font-bold "> Logo</a>
+                <div class="flex flex-col text-1xl  my-10 space-y-3">
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]">
+                        <i class="fa-solid fa-house mr-2  ml-16"></i><a href="index.html">Dashboard</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-user mr-2 ml-16"></i><a href="profile.html">Profile</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-building mr-2 ml-16"></i><a href="department.html">Department</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-users mr-2 ml-16"></i><a href="user.html">User</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-user-plus mr-2 ml-16"></i><a href="team.html">Team</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-file mr-2 ml-16"></i><a href="reporting.html">Reporting</a></div>
+
+                    <div class=" bg-teal-400 text-2xl text-white p-4 rounded-lg bg-fuchsia-500 hover:bg-teal-500  absolute inset-x-4 bottom-5">
+                        <i class="fa-solid fa-gear mr-2 ml-16"></i><a href="#">Setting</a></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto border-2 border-gray-400 p-10 mt-[100px] bg-violet-500">
+                <h2 class="text-center text-4xl font-bold text-white mb-4">profile information</h2>
+                
+                  <div class="p-2 w-full">
+                    <div class="relative">
+                      <label for="email" class="leading-7 text-lg text-white">username</label>
+                      <input type="text" id="username" name="username" placeholder="username" class="w-full bg-gray-100  rounded border border-gray-300 focus:border-indigo-500 focus: focus:ring-2 focus:ring-indigo-200  text-base outline-none text-gray-700 py-1 px-3 resize-none leading-8 transition-colors duration-200 ease-in-out"></input>
+                    </div>
+                  </div>
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                          <label for="password" class="leading-7 text-lg text-white">Email</label>
+                          <input type="email" id="email" name="email" placeholder="email" class="w-full bg-gray-100  rounded border border-gray-300 focus:border-indigo-500 focus: focus:ring-2 focus:ring-indigo-200  text-base outline-none text-gray-700 py-1 px-3 resize-none leading-8 transition-colors duration-200 ease-in-out"></input>
+                        </div>
+                    </div>
+                    
+                  </div>
+                  <div class="p-2 w-full">
+                    <button class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Signup</button>
+                  </div>
+                  
+                </section>
+            </div>
+        
+
+        
+
+
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleSidebarButton = document.getElementById('toggleSidebar');
+            const sidebar = document.querySelector('.header');
+    
+            toggleSidebarButton.addEventListener('click', function () {
+                sidebar.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>

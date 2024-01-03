@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="flex">
+        <section class="header h-screen w-[300px] sm:w-[200px] lg:w-[300px] xl:w-[300px] ">
+            <div class=" h-full w-full  bg-[#e2e8f0] relative  p-4">
+                <a href="#" class="text-3xl font-bold "> Logo</a>
+                <div class="flex flex-col text-1xl  my-10 space-y-3">
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]">
+                        <i class="fa-solid fa-house mr-2  ml-16"></i><a href="index.html">Dashboard</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-user mr-2 ml-16"></i><a href="profile.html">Profile</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-building mr-2 ml-16"></i><a href="department.html">Department</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-users mr-2 ml-16"></i><a href="user.html">User</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-user-plus mr-2 ml-16"></i><a href="team.html">Team</a></div>
+                    <div class=" hover:bg-teal-400 hover:text-white p-4 rounded-lg bg-[#f5f5f5]"><i
+                            class="fa-solid fa-file mr-2 ml-16"></i><a href="reporting.html">Reporting</a></div>
+
+                    <div class=" bg-teal-400 text-2xl text-white p-4 rounded-lg bg-fuchsia-500 hover:bg-teal-500  absolute inset-x-4 bottom-5">
+                        <i class="fa-solid fa-gear mr-2 ml-16"></i><a href="#">Setting</a></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- main -->
+        <section class="main h-screen w-[850px] border-white border-l-2 bg-[#e2e8f0] sm:w-[650px] md:w-[750px] lg:w-[850px] xl:w-[1000px]">
+            
+            <div class="h-[20%] grid grid-cols-3 gap-4 content-normal p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+                <div class="bg-[#f5f5f5] row-span-2 rounded-[20px] p-5">
+                    <h1 class="text-center text-md font-medium">No. Of User Available</h1>
+                    <h1 class="flex justify-center item-end font-bold text-4xl">60</h1>
+                </div>
+
+                <div class="bg-[#f5f5f5] row-span-2 rounded-[20px] p-5">
+                    <h1 class="text-center text-md font-medium">No. Of QR Code Generator</h1>
+                    <h1 class="flex justify-center item-end font-bold text-4xl">5</h1>
+                </div>
+
+                <div class="bg-[#f5f5f5] rounded-[10px] px-14 flex justify-around items-center">
+                    <i class="fa-regular fa-message "></i>
+                    <button class=" text-md font-medium">Messages</button>
+                    <div class="rounded-full bg-pink-500 px-3 text-white">99+</div>
+                </div>
+
+                <div class="bg-[#f5f5f5] rounded-[10px] px-14 flex justify-around items-center">
+                    <i class="fa-regular fa-envelope"></i>
+                    <button class=" text-md font-medium">Emails</button>
+                    <div class="rounded-full bg-cyan-500 px-3 text-white">30+</div>
+                </div>
+
+            </div>
+
+            <div class="h-64 w-[95%] bg-[#f5f5f5] mx-auto text-center rounded-[20px] sm:w-[90%] md:w-[95%] lg:w-[95%] xl:w-[95%]">
+                <canvas id="myChart" class="w-[90%] mx-auto text-center h-full "></canvas>
+            </div>
+             
+            <button id="toggleSidebar" class="lg:hidden xl:hidden bg-gray-300 px-4 py-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+    <!-- chart section -->
+    <div class="grid grid-cols-2 gap-5 m-5 h-[38%] sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+        <div class="bg-[#f5f5f5] rounded-[20px]">
+            <canvas id="myLineChart" class="w-full h-full"></canvas>
+        </div>
+        <div class="bg-[#f5f5f5] rounded-[20px]">
+            <canvas id="myDoughnutChart" class="w-full h-40"></canvas>
+
+        </div>
+
+    </div>
+    </section>
+    <!-- footer -->
+    <section class="footer bg-[#e2e8f0]">
+        <div class="m-10 flex flex-col space-y-10">
+            <div class=" w-full bg-[#f5f5f5] rounded-[20px] ">
+                <canvas id="donutChart"></canvas>
+            </div>
+
+            <div class="bg-[#f5f5f5] rounded-[20px] ">
+                <canvas id="donutChartt"></canvas>
+
+            </div>  
+        </div>
+
+    </section>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleSidebarButton = document.getElementById('toggleSidebar');
+            const sidebar = document.querySelector('.header');
+    
+            toggleSidebarButton.addEventListener('click', function () {
+                sidebar.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
